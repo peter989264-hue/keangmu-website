@@ -27,8 +27,8 @@ import {
   Clock,
   Star,
   ExternalLink,
-  Wechat,
-  QrCode
+  MessageCircle,
+  ScanBarcode
 } from 'lucide-react'
 import './App.css'
 
@@ -233,7 +233,7 @@ function App() {
     {
       title: '微信功能',
       count: '80+',
-      icon: Wechat,
+      icon: MessageCircle,
       color: 'bg-emerald-500',
       functions: ['公众号对接', '小程序', '企业微信', '微信支付', '模板消息']
     },
@@ -466,7 +466,7 @@ function App() {
                     <p className="text-xs md:text-sm font-medium">手机站</p>
                   </div>
                   <div className="p-4 bg-white/20 rounded-xl text-center hover:bg-white/30 transition-colors">
-                    <Wechat className="w-8 h-8 mx-auto mb-2" />
+                    <MessageCircle className="w-8 h-8 mx-auto mb-2" />
                     <p className="text-xs md:text-sm font-medium">微信站</p>
                   </div>
                   <div className="p-4 bg-white/20 rounded-xl text-center hover:bg-white/30 transition-colors">
@@ -868,7 +868,7 @@ function App() {
               <div className="mt-8 pt-8 border-t border-white/20">
                 <div className="flex items-center space-x-4">
                   <div className="w-24 h-24 bg-white rounded-lg flex items-center justify-center">
-                    <QrCode className="w-16 h-16 text-gray-800" />
+                    <ScanBarcode className="w-16 h-16 text-gray-800" />
                   </div>
                   <div>
                     <p className="font-bold mb-1">微信咨询</p>
@@ -975,7 +975,7 @@ function App() {
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                  <Wechat size={20} />
+                  <MessageCircle size={20} />
                 </a>
                 <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
                   <MessageSquare size={20} />
@@ -1057,11 +1057,11 @@ function App() {
           whileHover={{ scale: 1.1 }}
         >
           <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-full flex items-center justify-center shadow-2xl cursor-pointer">
-            <Wechat size={24} />
+            <MessageCircle size={24} />
           </div>
           {/* 二维码弹窗 */}
           <div className="absolute right-full top-0 mr-3 bg-white p-3 rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-32">
-            <QrCode className="w-24 h-24 text-gray-800" />
+            <ScanBarcode className="w-24 h-24 text-gray-800" />
             <p className="text-xs text-center text-gray-600 mt-2">微信扫码咨询</p>
           </div>
         </motion.div>
